@@ -1,7 +1,7 @@
 /**
  * Created by vrigzlinuxmint13 on 12/26/15.
  */
-var CommentBox = React.createClass({
+var CommentBox = React.createClass( {
 	render: function() {
 		return (
 			<div className="commentBox">
@@ -11,7 +11,7 @@ var CommentBox = React.createClass({
 			</div>
 		);
 	}
-});
+} );
 var CommentList = React.createClass( {
 	render: function() {
 		return (
@@ -30,7 +30,19 @@ var CommentForm = React.createClass( {
 		);
 	}
 } );
+var Comment = React.createClass( {
+	render: function() {
+		return (
+			<div className="comment">
+				<h2 className="commentAuthor">
+					{this.props.author}
+				</h2>
+				{this.props.children}
+			</div>
+		);
+	}
+} );
 ReactDOM.render(
 	<CommentBox />,
-	document.getElementById('content')
+	document.getElementById( 'content' )
 );
