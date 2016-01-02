@@ -58,6 +58,6 @@ var data = [
 	{id: 2, author: "Jordan Walke", text: "This is *another* comment"}
 ];
 ReactDOM.render(
-	<CommentBox data={data} />,
+	<CommentBox url="/api/comments" />,
 	document.getElementById( 'content' )
 );
